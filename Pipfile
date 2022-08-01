@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 djangorestframework = "*"
 mysql-connector-python = "==8.0.26"
+django-cors-headers = "*"
 
 [dev-packages]
 
