@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "d10beb62-d97d-4257-b539-1b2ef8014b4e",
+		"name": "Music_LIbrary_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21446045"
+	},
+	"item": [
+		{
+			"name": "All songs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"id\": 1,\n        \"title\": \"Beat It\",\n        \"artist\": \"Michael Jackson\",\n        \"album\": \"Thriller\",\n        \"release_date\": \"11/30/1982\",\n        \"genre\": \"Pop\"\n    }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/music",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"music"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_New_Song",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"If it isnt Love\",\n    \"artist\": \"New Edition\",\n    \"album\":\"Heart Break\",\n    \"release_date\": \"6/9/1988\",\n    \"genre\": \"Hip Hop/R&B\"\n}    \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/music/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"music",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Song",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"id\": 7,\n    \"title\": \"Step into the Realm\",\n    \"artist\": \"The Roots\",\n    \"album\": \"Things Fall Apart\",\n    \"release_date\": \"2/23/1999\",\n    \"genre\": \"Hip Hop/R&B\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/music",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"music"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Song",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"id\": 1,\n        \"title\": \"Billy Jean\",\n        \"artist\": \"Michael Jackson\",\n        \"album\": \"Thriller\",\n        \"release_date\": \"11/30/1982\",\n        \"genre\": \"Pop\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/music/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"music",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
